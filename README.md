@@ -18,7 +18,38 @@ Our machine can be operated two ways: *digitally* (with an Arduino) or *in analo
 
 Digital operation involves an Arduino Uno taking input from a pushbutton (with a pulldown resistor) and driving the wheel motor with a [2N2222](http://a.co/e2eoqSZ) NPN transistor (for handling the current draw) and a zener diode (for guarding against momentary voltage reversals).
 
-Sketch highlights forthcoming!
+The initializations are relatively simple:
+
+```C
+ const int motorPin = 3;
+ const int pullup = 2;
+ const int LED = 13;
+ const int UVleds = 4;
+```
+
+```C
+  pinMode(motorPin, OUTPUT);
+  pinMode(pullup, INPUT_PULLUP);
+  pinMode(LED, OUTPUT);
+  pinMode(UVleds, OUTPUT);
+```
+
+and most of the circuit control happens within a single if-else block:
+
+```C
+  int buttonVal = digitalRead(2);
+
+  if (buttonVal == HIGH) {
+    digitalWrite(LED, LOW);
+    digitalWrite(UVleds, LOW);
+    analogWrite(motorPin, 0);
+  } else {
+    digitalWrite(LED, HIGH);
+    digitalWrite(UVleds, HIGH);
+    analogWrite(motorPin, 255);
+  }
+
+```
 
 ## Analog Operation
 
