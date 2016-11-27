@@ -12,7 +12,7 @@ We are:
 
 This is our repository, where we keep the sketch that runs our project as well as all of our STL files.
 
-Our machine can be operated two ways: *digitally* (with an Arduino) or *in analog* (with potentiometers). Both share a 5V rechargeable power source. The three-fan stack responsible for bubble-blowing airflow is linked independently to the 5V supply and is thus beyond user control, beyond switching power on/off.
+Our machine can be operated two ways: *digitally* (with an Arduino) or *in analog* (with potentiometers). Both share a 5V rechargeable power source. The three-fan stack responsible for bubble-blowing airflow is linked independently to the 5V supply and is thus beyond user control, beyond switching power on/off. Switching operation methods requires reconfiguring the circuitry a bit (we left the Arduino control circuits on the breadboard so it's just a matter of re-plugging a few jumpers).
 
 ## Digital Operation
 
