@@ -1,6 +1,6 @@
 # :sparkles: BFFFS :sparkles: 
 
-Hey! We are *NCSU E101 012 FEDD Group 1*: :sparkles: BFFFS! :sparkles:
+Hey! We are *NCSU E101 012 FEDD Group 1*: BFFFS!
 
 We are:
 
